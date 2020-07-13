@@ -14,7 +14,7 @@
     </parent>
     <groupId>kasad0r</groupId>
     <artifactId>pet-clinic</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.1 SNAPSHOT</version>
     <name>pet-clinic</name>
     <description>Pet Clinic Project</description>
 
@@ -41,8 +41,6 @@
 
 
   <scm>
-      <developerConnection>https://github.com/Kasad0r/pet-clinic.git</developerConnection>
-      <url>https://github.com/Kasad0r/pet-clinic</url>
-    <tag>pet-clinic-0.0.1</tag>
+      <developerConnection>scm:git:git@github.com:Kasad0r/pet-clinic.git</developerConnection>
   </scm>
 </project>
