@@ -41,7 +41,8 @@
 
 
   <scm>
-      <developerConnection>scm:git:git@github.com:Kasad0r/pet-clinic.git</developerConnection>
+      <developerConnection>https://github.com/Kasad0r/pet-clinic.git</developerConnection>
+      <url>https://github.com/Kasad0r/pet-clinic</url>
     <tag>pet-clinic-0.0.1</tag>
   </scm>
 </project>
