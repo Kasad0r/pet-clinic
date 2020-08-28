@@ -2,10 +2,12 @@ package kasad0r.petclinic.services.map;
 
 import kasad0r.petclinic.model.Pet;
 import kasad0r.petclinic.services.CrudService;
+import kasad0r.petclinic.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+@Service
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
         return super.findAll();
