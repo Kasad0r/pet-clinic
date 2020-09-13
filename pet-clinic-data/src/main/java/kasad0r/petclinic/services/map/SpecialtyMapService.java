@@ -1,7 +1,8 @@
 package kasad0r.petclinic.services.map;
 
 import kasad0r.petclinic.model.Specialty;
-import kasad0r.petclinic.services.SpecialitesService;
+import kasad0r.petclinic.services.SpecialtyService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
@@ -10,7 +11,8 @@ import java.util.Set;
  * @created 08/09/2020-16:52
  * @project pet-clinic
  */
-public class SpecialityMapService extends AbstractMapService<Specialty, Long> implements SpecialitesService {
+@Service
+public class SpecialtyMapService extends AbstractMapService<Specialty, Long> implements SpecialtyService {
     @Override
     void deleteById(Long aLong) {
         super.deleteById(aLong);
