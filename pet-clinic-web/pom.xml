@@ -15,6 +15,7 @@
         <wro4j.version>1.9.0</wro4j.version>
     </properties>
     <artifactId>pet-clinic-web</artifactId>
+
     <dependencies>
         <dependency>
             <artifactId>pet-clinic-data</artifactId>
