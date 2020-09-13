@@ -7,5 +7,5 @@ import kasad0r.petclinic.model.Specialty;
  * @created 08/09/2020-16:50
  * @project pet-clinic
  */
-public interface SpecialitesService extends CrudService<Specialty,Long> {
+public interface SpecialtyService extends CrudService<Specialty,Long> {
 }
