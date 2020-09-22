@@ -1,11 +1,11 @@
 package kasad0r.petclinic.services.map;
 
 import kasad0r.petclinic.model.Pet;
-import kasad0r.petclinic.services.CrudService;
 import kasad0r.petclinic.services.PetService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
+
 @Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
@@ -24,12 +24,12 @@ public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetS
     }
 
     @Override
-    void deleteById(Long aLong) {
+    public void deleteById(Long aLong) {
         super.deleteById(aLong);
     }
 
     @Override
-    void delete(Pet obj) {
+    public void delete(Pet obj) {
         super.delete(obj);
     }
 }

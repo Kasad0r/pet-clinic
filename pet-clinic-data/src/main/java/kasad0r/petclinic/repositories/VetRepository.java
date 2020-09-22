@@ -9,4 +9,5 @@ import org.springframework.data.repository.CrudRepository;
  * @project pet-clinic
  */
 public interface VetRepository extends CrudRepository<Vet, Long> {
+
 }

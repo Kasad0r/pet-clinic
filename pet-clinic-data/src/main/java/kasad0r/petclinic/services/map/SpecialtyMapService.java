@@ -14,12 +14,12 @@ import java.util.Set;
 @Service
 public class SpecialtyMapService extends AbstractMapService<Specialty, Long> implements SpecialtyService {
     @Override
-    void deleteById(Long aLong) {
+    public void deleteById(Long aLong) {
         super.deleteById(aLong);
     }
 
     @Override
-    void delete(Specialty obj) {
+    public void delete(Specialty obj) {
         super.delete(obj);
     }
 
