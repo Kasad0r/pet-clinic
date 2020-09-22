@@ -2,12 +2,14 @@ package kasad0r.petclinic.bootstrap;
 
 import kasad0r.petclinic.model.*;
 import kasad0r.petclinic.services.*;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 
 @Component
+@Slf4j
 public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
@@ -32,7 +34,7 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         int count = petTypeService.findAll().size();
-
+        log.debug("Loading Bootstrap Data...");
         if (count == 0) {
             loadData();
         }
