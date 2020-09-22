@@ -1,10 +1,7 @@
 package kasad0r.petclinic.bootstrap;
 
 import kasad0r.petclinic.model.*;
-import kasad0r.petclinic.services.OwnerService;
-import kasad0r.petclinic.services.PetTypeService;
-import kasad0r.petclinic.services.SpecialtyService;
-import kasad0r.petclinic.services.VetService;
+import kasad0r.petclinic.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -16,12 +13,18 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialtyService specialtyService;
+    private final VisitService visitService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService specialtyService) {
+    public DataLoader(OwnerService ownerService,
+                      VetService vetService,
+                      PetTypeService petTypeService,
+                      SpecialtyService specialtyService,
+                      VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialtyService = specialtyService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -69,8 +72,8 @@ public class DataLoader implements CommandLineRunner {
         dimasPet.setOwner(owner1);
         dimasPet.setName("Uzik");
 
-
         owner1.getPets().add(dimasPet);
+        ownerService.save(owner1);
 
         Owner owner2 = new Owner();
         owner2.setFirstName("Anton");
@@ -79,6 +82,13 @@ public class DataLoader implements CommandLineRunner {
         owner2.setCity("Krukiwshchyna");
         owner2.setTelephone("+3809314927593");
         ownerService.save(owner2);
+
+        Visit catVisit = new Visit();
+        catVisit.setPet(dimasPet);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDescription("Sneezy Kitty");
+
+        visitService.save(catVisit);
 
         Pet antoninaPet = new Pet();
         antoninaPet.setPetType(savedCatPetType);
