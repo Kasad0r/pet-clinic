@@ -1,8 +1,18 @@
 package kasad0r.petclinic.model;
 
-public class Person extends BaseEntity{
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+import javax.validation.constraints.NotEmpty;
 
+@MappedSuperclass
+public class Person extends BaseEntity {
+
+    @NotEmpty
+    @Column(name = "first_name")
     private String firstName;
+
+    @NotEmpty
+    @Column(name = "second_name")
     private String lastName;
 
 
