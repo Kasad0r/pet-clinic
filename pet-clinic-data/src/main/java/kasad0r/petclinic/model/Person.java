@@ -2,6 +2,7 @@ package kasad0r.petclinic.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
@@ -9,6 +10,7 @@ import javax.persistence.MappedSuperclass;
 import javax.validation.constraints.NotEmpty;
 
 @Data
+@EqualsAndHashCode(callSuper = true)
 @MappedSuperclass
 @AllArgsConstructor
 @NoArgsConstructor
